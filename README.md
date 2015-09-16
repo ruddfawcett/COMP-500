@@ -1,2 +1,14 @@
 # COMP-500
-All source code for PA's COMP-500 in Java.
+Source code for all projects in PA's COMP-500 class.
+
+### Comment Template
+```
+/**
+ * NAME
+ * DESCRIPTION
+ * 
+ * @author  Rudd Fawcett
+ * @version 1.0
+ * @since   CURRENT_DATE 
+ */
+```
