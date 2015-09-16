@@ -8,8 +8,8 @@ Source code for all projects written in Phillips Academy's AP COMP-500 class.
  * DESCRIPTION
  * 
  * @author  Rudd Fawcett
- * @version 1.0
- * @since   CURRENT_DATE 
+ * @course  Period 1 AP CS, Dr. Miles
+ * @due     CURRENT_DATE 
  */
 ```
 
