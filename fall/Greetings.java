@@ -16,10 +16,10 @@ public class Greetings {
     System.out.print("Enter your first name: ");
     String firstName = keyboard.nextLine();
 
-    System.out.print("Enter yoru last name: ");
+    System.out.print("Enter your last name: ");
     String lastName = keyboard.nextLine();
 
-    System.out.println("Hello, " + firstName + " " + lastName);
+    System.out.println("Hello, " + firstName + " " + lastName+".");
     System.out.println("Welcome to Java!");
 
     keyboard.close();
