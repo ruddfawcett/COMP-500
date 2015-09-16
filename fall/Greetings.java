@@ -13,10 +13,10 @@ public class Greetings {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
 
-    System.out.println("Enter your first name: ");
+    System.out.print("Enter your first name: ");
     String firstName = keyboard.nextLine();
 
-    System.out.println("Enter yoru last name: ");
+    System.out.print("Enter yoru last name: ");
     String lastName = keyboard.nextLine();
 
     System.out.println("Hello, " + firstName + " " + lastName);
