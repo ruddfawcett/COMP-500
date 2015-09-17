@@ -26,6 +26,8 @@ public class Greetings3 {
 
     println(""); // Some padding
     println("You're " + (age * 7) + " in dog years, ya sly dog.");
+
+    keyboard.close();
   }
 
   protected static void print(String string) {
