@@ -11,12 +11,12 @@ import javax.swing.JPanel;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MovingDisk extends JPanel implements ActionListener {
   private int time;
@@ -39,7 +39,7 @@ public class MovingDisk extends JPanel implements ActionListener {
     g.setColor(Color.ORANGE);
     g.fillOval(x - r, y - r, 2*r, 2*r);
   }
-  
+
   public void actionPerformed(ActionEvent e) {
     time++;
     repaint();
