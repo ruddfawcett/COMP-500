@@ -19,10 +19,10 @@ public class MathOperationTests {
 
     // BEGIN float testing.
 
-    println("float Division Test: " + floatDivide(7, 2));
-    println("float Multiplication Test: " + floatMultiply(7, 2));
-    println("float Addition Test: " + floatAdd(7, 2));
-    println("float Subtraction Test: " + floatSubtract(7, 2));
+    println("float Division Test: " + floatDivide(7.5f, 2.3f));
+    println("float Multiplication Test: " + floatMultiply(7.5f, 2.3f));
+    println("float Addition Test: " + floatAdd(7.5f, 2.3f));
+    println("float Subtraction Test: " + floatSubtract(7.5f, 2.3f));
 
     println("");
 
