@@ -25,6 +25,8 @@ public class PollTest {
     String name = keyboard.nextLine().trim();
 
     checkName(name);
+
+    keyboard.close();
   }
 
   public static void initialVotes() {
