@@ -41,7 +41,7 @@ public class Problem20 {
       minString = "minute";
     }
 
-    System.out.println("Your bus leaves in " + waitHours + " " + hourString + " and " + waitMin + " " + minString + ".");
+    System.out.printf("Your bus leaves in %d %s and %d %s.\n", waitHours, hourString, waitMin, minString);
 
     keyboard.close();
   }
