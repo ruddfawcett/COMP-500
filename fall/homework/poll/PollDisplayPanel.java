@@ -59,15 +59,6 @@ public class PollDisplayPanel extends JPanel {
   }
 
   // Draws the pie chart.
-  // To avoid gaps in the picture, the following algorithm is used:
-  // 1. set fromDegree to 0;
-  // 2. draw the red sector and increment fromDegree by its size
-  // 3. draw the green sector and increment fromDegree by its size
-  // 4. set the size of the blue sector to the remaining
-  //    area, 360 - fromDegree, but not less than 0:
-  //      degrees = Math.max(360 - fromDegree, 0);
-  //    (Occasionally, due to rounding errors, fromDegree may become 361,
-  //    for example, count1 = 5, count2 = 11, count3 = 0.)
   private void drawPieChart(Graphics g, int x, int y, int r) {
     int total = count1 + count2 + count3;
     int fromDegree = 0;
@@ -101,9 +92,9 @@ public class PollDisplayPanel extends JPanel {
     y += (r + 20);
     g.setColor(Color.BLACK);
 
-    g.drawString(name1 , x - r, y);
-    g.drawString(name2 , x, y);
-    g.drawString(name3 , x + r, y);
+    g.drawString(name1 + ": " + count1 , x - r, y);
+    g.drawString(name2 + ": " + count2 , x, y);
+    g.drawString(name3 + ": " + count3 , x + r, y);
 
     // Display the color squares:
     y += 5;
