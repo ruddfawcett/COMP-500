@@ -10,8 +10,7 @@ import javax.swing.JFrame;
 
 public class BalloonDraw extends JFrame
 {
-  public BalloonDraw()  // constructor
-  {
+  public BalloonDraw()  {
     super("Drawing Editor");
 
     DrawingPanel canvas = new DrawingPanel();
@@ -21,8 +20,7 @@ public class BalloonDraw extends JFrame
     c.add(controls, BorderLayout.SOUTH);
   }
 
-  public static void main(String[] args)
-  {
+  public static void main(String[] args) {
     BalloonDraw window = new BalloonDraw();
     window.setBounds(100, 100, 400, 400);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

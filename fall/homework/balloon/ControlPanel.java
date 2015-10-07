@@ -1,16 +1,17 @@
-/**
- * Control panel in BalloonDraw.
- */
-
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JPanel;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 
+/*
+ * Represents the control panel in BalloonDraw.
+ */
 public class ControlPanel extends JPanel
 {
   private DrawingPanel canvas;
-  private JButton colorButton, colorDisplay, balloonButton;
+  private JButton colorButton, colorDisplay; //, balloonButton;
+  private JComboBox<String> chooseBalloonShape;
 
   public ControlPanel(DrawingPanel canvas)
   {
@@ -23,12 +24,16 @@ public class ControlPanel extends JPanel
     colorDisplay.setBackground(canvas.getColor());
     colorDisplay.setEnabled(false);
 
-    balloonButton = new JButton("Add Balloon");
-    balloonButton.addActionListener(new BalloonButtonListener());
+    //balloonButton = new JButton("Add Balloon");
+    String[] balloonShapeNames = {"Round", "Oval", "Square", "Fancy"};
+    chooseBalloonShape = new JComboBox<String>(balloonShapeNames);
+    //balloonButton.addActionListener(new BalloonButtonListener());
+    chooseBalloonShape.addActionListener(new BalloonButtonListener());
 
     add(colorButton);
     add(colorDisplay);
-    add(balloonButton);
+    //add(balloonButton);
+    add(chooseBalloonShape);
   }
 
   private class ColorButtonListener
@@ -47,7 +52,7 @@ public class ControlPanel extends JPanel
   {
     public void actionPerformed(ActionEvent e)
     {
-      canvas.addBalloon();
+      canvas.addBalloon(chooseBalloonShape.getSelectedIndex() + 1);
       canvas.requestFocus();
     }
   }

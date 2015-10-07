@@ -1,7 +1,3 @@
-/**
- * Canvas in BalloonDraw
- */
-
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.MouseListener;
@@ -13,6 +9,9 @@ import javax.swing.JPanel;
 import javax.swing.JColorChooser;
 import java.util.ArrayList;
 
+/*
+ * Represents the canvas in BalloonDraw.
+ */
 public class DrawingPanel extends JPanel
   implements MouseListener, MouseMotionListener, KeyListener
 {
@@ -60,12 +59,19 @@ public class DrawingPanel extends JPanel
   // Called from controlPanel when the "Add balloon" button is clicked.
   // Places a new balloon with a random radius and the current color
   // at the center of the drawing panel.
-  public void addBalloon()
+  public void addBalloon(int shape)
   {
     int w = getWidth();
     int h = getHeight();
     int radius = 10 + (int)(Math.random() * w / 2);
-    activeBalloon = new Balloon(w/2, h/2, radius, color);
+    switch (shape)
+    {
+      case 1: activeBalloon = new RoundBalloon(w/2, h/2, radius, color); break;
+      case 2: activeBalloon = new OvalBalloon(w/2, h/2, radius, color); break;
+      case 3: activeBalloon = new SquareBalloon(w/2, h/2, radius, color); break;
+      case 4: activeBalloon = new FancyBalloon(w/2, h/2, radius, color); break;
+      default: activeBalloon = new RoundBalloon(w/2, h/2, radius, color); break;
+    }
     balloons.add(activeBalloon);
     repaint();
   }

@@ -9,7 +9,7 @@ import java.awt.Graphics;
 
 public class Balloon
 {
-  private int xCenter, yCenter, radius;
+  public int xCenter, yCenter, radius;
   private Color color;
 
   /**
@@ -139,5 +139,16 @@ public class Balloon
     else
       g.drawOval(xCenter - radius,
                  yCenter - radius, 2*radius, 2*radius);
+  }
+
+  public static void main(String[] args) {
+    Balloon happy = new Balloon(32, -6, 7, Color.ORANGE);
+    System.out.println("happy is at (" + happy.getX() + ", " + happy.getY()+") with radius " + happy.getRadius());
+
+    System.out.println("Is on border? " + happy.isOnBorder(39, 0));
+    System.out.println("Is it inside? " + happy.isInside(34, -4));
+    System.out.println("Distance? " + happy.distance(32, 1));
+
+    System.exit(0);
   }
 }
