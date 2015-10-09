@@ -9,6 +9,10 @@ public class Pets {
     Cat c = new Cat("Bix");
     c.makeNoise();
 
-    System.out.println(c.name + " has " + c.LIVES + " lives!");
+    System.out.println(c.name + " has " + c.lives + " lives!");
+
+    c.died();
+
+    System.out.println(c.name + " has " + c.lives + " lives!");
   }
 }

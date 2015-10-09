@@ -6,7 +6,7 @@ public class Dog extends Animal {
     this.noise = "bark";
   }
 
-  protected int dogYears () {
-    return age * 7;
+  protected int dogYears() {
+    return this.age * 7;
   }
 }
