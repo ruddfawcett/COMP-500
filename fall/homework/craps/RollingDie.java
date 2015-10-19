@@ -1,4 +1,11 @@
-// Implements a rolling die
+/**
+ * RollingDie
+ * A `Die` subclass that handles the graphical representation of a dice.
+ *
+ * @author  Maria Litvin and Rudd Fawcett
+ * @course  Period 1 AP CS, Dr. Miles
+ * @due     2015-10-20
+ */
 
 import java.awt.Graphics;
 import java.awt.Color;
@@ -156,6 +163,10 @@ public class RollingDie extends Die
     int y2 = y + 3*step;
     int y3 = y + 5*step + 1;
 
+    /**
+     * Creates circles based on the number of dots using the "coordinate"
+     * like system calculated above, with `x1`, `x2`, `x3`, `y1`, etc.
+     */
     switch (numDots) {
       case 1:
         g.fillOval(x2, y2, dotSize, dotSize);

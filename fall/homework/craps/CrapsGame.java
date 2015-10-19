@@ -1,4 +1,11 @@
-// Implements the game of Craps logic
+/**
+ * CrapsGame
+ * Implements the logic for a game of craps (handles rolling and stores points).
+ *
+ * @author  Maria Litvin and Rudd Fawcett
+ * @course  Period 1 AP CS, Dr. Miles
+ * @due     2015-10-20
+ */
 
 public class CrapsGame {
   private int point = 0;
