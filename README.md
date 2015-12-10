@@ -6,10 +6,10 @@ Source code for all projects written in Phillips Academy's AP COMP-500 class.
 /**
  * NAME
  * DESCRIPTION
- * 
+ *
  * @author  Rudd Fawcett
- * @course  Period 1 AP CS, Dr. Miles
- * @due     CURRENT_DATE 
+ * @course  Period 6 AP CS, Ms. Litvin
+ * @due     CURRENT_DATE
  */
 ```
 
