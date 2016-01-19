@@ -1,7 +1,13 @@
 /**
+ * Coins
  * This class implements a vendor that sells one kind
  * of items. A vendor carries out sales transactions.
+ *
+ * @author  Rudd Fawcett
+ * @course  Period 6 AP CS, Ms. Litvin
+ * @due     2016-01-15
  */
+
 public class Vendor {
   /**
    * The number of items in stock.
@@ -16,10 +22,12 @@ public class Vendor {
    */
   private int deposit;
   /**
-   * THe amount of
+   * The amount of change to give back to the user.
    */
   private int change;
 
+
+  private static double totalSales = 0;
 
   /**
    * Constructs a Vendor
@@ -75,6 +83,8 @@ public class Vendor {
    */
   public boolean makeSale() {
     if (stock > 0 && deposit >= price) {
+      // price / 100 converts cents to dollars.
+      totalSales += price / 100.0;
       stock--;
       change = deposit - price;
       deposit = 0;
@@ -89,11 +99,21 @@ public class Vendor {
   /**
    * Returns and zeroes out the amount of change (from
    * the last sale or refund).
-   * @return number of cents in the current change (int)
+   * @return number of cents in the current change
    */
   public int getChange() {
     int tmp = change;
     change = 0;
+    return tmp;
+  }
+
+  /**
+   * The total amount of money spent at the machine.
+   * @return The amount in dollars and cents.
+   */
+  public static double getTotalSales() {
+    double tmp = totalSales;
+    totalSales = 0;
     return tmp;
   }
 }
