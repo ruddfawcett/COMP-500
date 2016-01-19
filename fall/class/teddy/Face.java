@@ -1,3 +1,5 @@
+package teddy;
+
 public class Face {
   private String features;
 
