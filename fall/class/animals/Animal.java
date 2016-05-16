@@ -1,7 +1,6 @@
-public class Animal {
-  protected String name;
+public abstract class Animal {
   protected String noise;
-  
+
   public void printName() {
     System.out.println(name);
   }

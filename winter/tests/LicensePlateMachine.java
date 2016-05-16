@@ -1,7 +1,10 @@
+import java.util.ArrayList;
+
 public class LicensePlateMachine {
   private static int plate = 0;
   private static final int PLATE_BASE_NUM = 100000;
 
+  // Optional
   public LicensePlateMachine() {
 
   }
